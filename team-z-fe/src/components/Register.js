@@ -56,6 +56,7 @@ export default class Register extends React.Component {
                             name="password2"
                         />
                         <button type="submit">Register</button>
+                        <button onClick={()=>{this.props.history.push('/')}}>Go Back</button>
                     </form>
                 </div>
             </div>
