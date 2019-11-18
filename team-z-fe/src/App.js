@@ -3,25 +3,30 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import './styles/App.scss';
 import Game from './components/game/Game'
 import axios from 'axios';
+import './styles/App.scss';
+import Login from "./components/Login";
+import Register from "./components/Register";
+import Landing from "./components/Landing";
+
 const App = () => {
 
   const [token,setToken]=useState(null)
   const [user, setUser] = useState({})
+  
   useEffect(() => {
-    const user = {
-      "username": 'billybobdjango',
-      "password": 'IWnfnAlj@'
-    }
-    login(user)
-  })
+    setUser(user)
+    setToken(token)
+  }, [user, token])
   
   const login = user => {
+    //console.log(user)
     axios.post('https://lambda-mud-test.herokuapp.com/api/login/', {...user})
     .then(res => {
       console.log(res.data.key)
       setToken(res.data.key)
       localStorage.setItem('token', res.data.key )
       loginKey(localStorage.getItem('token'))
+      
     })
   }
 
@@ -42,11 +47,22 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-      {
-        localStorage.getItem('token') == token && <Game user={user} setUser={setUser} />
-      }
-      
-            
+    
+        <>
+          {/* Route paths for each components */
+          console.log(token)
+          }
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/login" render={(props)=> <Login {...props} loginKey={loginKey}/>}/>
+          <Route exact path="/register" render={(props)=> <Register {...props} user={user} setUser={setUser} />}/>
+          
+          
+          <Route
+            path='/game'
+            render={(props) => <Game {...props} user={user} setUser={setUser} />}
+          />
+          
+        </>
       </div>
     </Router>
   )
