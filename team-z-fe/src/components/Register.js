@@ -31,7 +31,7 @@ export default class Register extends React.Component {
         return (
             <div className="register-container">
                 <div className="register-page">
-                    Create an Account
+                    Create an Accounts
                     <form onSubmit={this.handleSubmit}>
                         <input
                             type="text"
