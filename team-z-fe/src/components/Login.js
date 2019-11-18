@@ -13,13 +13,16 @@ export default class Login extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault();
+        // this.props.login(this.state)
+        
         const endpoint = "https://lambda-mud-test.herokuapp.com/api/login/"
         axios
             .post(endpoint, this.state)
             .then(res => {
                 const token = res.data["key"];
-                localStorage.setItem("token", `Token ${token}`);
-                this.props.history.push("/");
+                localStorage.setItem("token", token);
+                this.props.loginKey(localStorage.getItem('token'))
+                this.props.history.push("/game");
             })
             .catch(error => {
                 console.log("error", error);
@@ -32,7 +35,7 @@ export default class Login extends React.Component {
                 <div className="login-page">
                     Please Log In
                     <div className="login-form">
-                        <form onSubmit={this.handleSubmit}>
+                        <form onSubmit={(event) => this.handleSubmit(event)}>
                             <input
                                 type="text"
                                 placeholder="username"

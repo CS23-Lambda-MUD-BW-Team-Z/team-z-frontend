@@ -4,7 +4,6 @@ import axios from "axios";
 export default class Register extends React.Component {
     state = {
         username: "",
-        email: "",
         password1: "",
         password2: ""
     }
@@ -42,22 +41,16 @@ export default class Register extends React.Component {
                             value={this.state.username}
                             name="username"
                         />
+
                         <input
-                            type="text"
-                            placeholder="email"
-                            onChange={this.handleChange}
-                            value={this.state.email}
-                            name="email"
-                        />
-                        <input
-                            type="text"
+                            type="password"
                             placeholder="password"
                             onChange={this.handleChange}
                             value={this.state.password1}
                             name="password1"
                         />
                         <input
-                            type="text"
+                            type="password"
                             placeholder="confirm password"
                             onChange={this.handleChange}
                             value={this.state.password2}
