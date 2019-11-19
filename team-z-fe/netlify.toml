@@ -1,6 +1,6 @@
 [build]
 base = "team-z-fe/"
-publish = "team-z-fe/build/"
+publish = "build/"
 command = "yarn run build"
 
 [[redirects]]
