@@ -10,8 +10,8 @@ export default class Landing extends React.Component {
             <>
                 <div className="top-container">
                     <div className="text-container">
-                        <h3 className="title">Lambda S</h3>
-                        <p className="subtitle">Subtitle</p>
+                        <h3 className="title">Lambda University</h3>
+                        <p className="subtitle">A virtual university maze game, powered by React and Django.</p>
                         <div className="button">
                             <Link className='landing-link' to='/register'>Register</Link>
                         </div>

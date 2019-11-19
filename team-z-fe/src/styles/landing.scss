@@ -33,7 +33,7 @@
 
     .landing-link {
       border-radius: 0px;
-      background-color: #bb1333;
+      background-color: $main-red;
       padding: 12px 25px;
       color: #fff;
       font-family: Lato, sans-serif;
@@ -56,7 +56,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: url("../components/images/University_Image_v3.jpeg");
+  background-image: url("../components/images/doors_image.png");
   background-position: 50% 50%;
   background-size: cover;
 }
