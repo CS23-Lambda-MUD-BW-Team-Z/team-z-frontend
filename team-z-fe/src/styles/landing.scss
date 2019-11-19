@@ -1,53 +1,3 @@
-.text-container {
-  margin: 150px;
-
-  .title {
-    font-family: Lato, sans-serif;
-    color: #383651;
-    font-size: 50px;
-    line-height: 56px;
-    font-weight: 700;
-    text-align: left;
-  }
-
-  .subtitle {
-    width: 40%;
-    margin-top: 20px;
-    font-family: Lato, sans-serif;
-    color: #383651;
-    font-size: 19px;
-    line-height: 30px;
-    font-weight: 400;
-  }
-
-  .button {
-    margin-top: 40px;
-    margin-right: auto;
-    margin-left: auto;
-    -webkit-transition: background-color 400ms ease, opacity 400ms ease;
-    transition: background-color 400ms ease, opacity 400ms ease;
-    font-family: Lato, sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 0px;
-
-    .landing-link {
-      border-radius: 0px;
-      background-color: #bb1333;
-      padding: 12px 25px;
-      color: #fff;
-      font-family: Lato, sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-decoration: none;
-    }
-
-    .landing-link:hover {
-      filter: brightness(0.8);
-    }
-  }
-}
-
 .top-container {
   display: flex;
   height: 72vh;
@@ -56,21 +6,81 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: url("../components/images/University_Image_v3.jpeg");
+  background-image: url("../components/images/doors_image_v4.png");
   background-position: 50% 50%;
   background-size: cover;
+
+  .text-container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      color: $red1;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 50px;
+      line-height: 56px;
+      font-weight: 700;
+      margin: 25px 0 200px;
+      text-transform: uppercase;
+      text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .subtitle {
+      width: 40%;
+      margin: 90px 0 30px;
+      color: #fff;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+  }
 }
 
 .bottom-container {
   display: flex;
   height: 28vh;
   justify-content: center;
+  background-color: $blue6;
+  margin: 0;
 
   .text-container {
     margin: 0;
+
+    .title {
+      margin: 40px 0 30px 0;
+      color: #fff;
+      font-size: 40px;
+      line-height: 56px;
+      font-weight: 700;
+      font-family: "Josefin Sans", sans-serif;
+      text-align: left;
+    }
+  }
+}
+
+.button {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  text-align: center;
+  margin: 0;
+
+  .landing-link {
+    background-color: $red1;
+    padding: 12px 25px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
   }
 
-  .button {
-    text-align: center;
+  .landing-link:hover {
+    filter: brightness(0.8);
   }
 }
