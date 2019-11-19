@@ -17,6 +17,8 @@ const App = () => {
     setToken(token)
   }, [user, token])
 
+  
+
   const login = user => {
     //console.log(user)
     axios.post('https://lambda-mud-test.herokuapp.com/api/login/', { ...user })
@@ -58,7 +60,7 @@ const App = () => {
 
           <Route
             path='/game'
-            render={(props) => <Game {...props} user={user} setUser={setUser} />}
+            render={(props) => <Game {...props} user={user} setUser={setUser} loginKey={loginKey} />}
           />
 
         </>

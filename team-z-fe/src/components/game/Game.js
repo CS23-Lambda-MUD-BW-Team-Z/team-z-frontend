@@ -3,10 +3,20 @@ import axios from 'axios'
 import { props } from 'bluebird'
 import Movements from './Movements'
 
-function Game( {setUser, user, history} ) {
-
+function Game( {setUser, user, history,loginKey} ) {
     const [rooms,setRooms] = useState([])
     // const [name, setName] = useState(null)
+
+    useEffect(()=>{
+        if (localStorage.getItem('token')!=null) {
+            loginKey(localStorage.getItem('token'))
+        //   setUser(user)
+        console.log('true')
+          
+        }
+      },[])
+
+
     useEffect(()=> {
         axios.get('https://lambda-mud-test.herokuapp.com/api/adv/init/')
         .then( res => {
