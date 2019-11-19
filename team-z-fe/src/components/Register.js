@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 export default class Register extends React.Component {
     state = {
         username: "",
+        email: "",
         password1: "",
         password2: ""
     }
@@ -43,7 +44,13 @@ export default class Register extends React.Component {
                             value={this.state.username}
                             name="username"
                         />
-
+                        <input
+                            type="text"
+                            placeholder="email"
+                            onChange={this.handleChange}
+                            value={this.state.email}
+                            name="email"
+                        />
                         <input
                             type="password"
                             placeholder="Password"

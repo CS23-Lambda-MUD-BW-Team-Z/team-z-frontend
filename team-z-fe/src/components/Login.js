@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 export default class Login extends React.Component {
     state = {
         username: "",
+        email: "",
         password: "",
     }
 
@@ -43,6 +44,13 @@ export default class Login extends React.Component {
                             onChange={this.handleChange}
                             value={this.state.username}
                             name="username"
+                        />
+                        <input
+                            type="text"
+                            placeholder="email"
+                            onChange={this.handleChange}
+                            value={this.state.email}
+                            name="email"
                         />
                         <input
                             type="password"
