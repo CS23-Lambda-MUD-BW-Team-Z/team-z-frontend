@@ -11,16 +11,11 @@ export default class Landing extends React.Component {
                 <div className="top-container">
                     <div className="text-container">
                         <h3 className="title">Lambda University</h3>
-                        <p className="subtitle">A virtual university maze game, powered by React and Django.</p>
+                        <p className="subtitle">A virtual university maze game,<br />powered by React & Django.</p>
                         <div className="button">
-                            <Link className='landing-link' to='/register'>Register</Link>
+                            <Link className='landing-link' to='/register'>Register to Play</Link>
                         </div>
                     </div>
-                    {/* <div className="button-container">
-                    <div className="register-button">
-                    <Link className='landing-link' to='/register'>Register</Link>
-                    </div>
-                </div> */}
                 </div>
                 <div className="bottom-container">
                     <div className="text-container">

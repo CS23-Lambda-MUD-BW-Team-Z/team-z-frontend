@@ -10,7 +10,7 @@ export default class Register extends React.Component {
     handleChange = event => {
         this.setState({ [event.target.name]: event.target.value })
     };
-//comments
+    //comments
     handleSubmit = event => {
         event.preventDefault();
         const endpoint = "https://lambda-mud-test.herokuapp.com/api/registration/";
@@ -31,11 +31,12 @@ export default class Register extends React.Component {
         return (
             <div className="register-container">
                 <div className="register-page">
-                    Create an Account
+                    <h1 className="title">Create an Account</h1>
+                    <p className="subtitle">Get ready for an epic adventure into Lambda University!</p>
                     <form onSubmit={this.handleSubmit}>
                         <input
                             type="text"
-                            placeholder="username"
+                            placeholder="Username"
                             onChange={this.handleChange}
                             value={this.state.username}
                             name="username"
@@ -43,20 +44,20 @@ export default class Register extends React.Component {
 
                         <input
                             type="password"
-                            placeholder="password"
+                            placeholder="Password"
                             onChange={this.handleChange}
                             value={this.state.password1}
                             name="password1"
                         />
                         <input
                             type="password"
-                            placeholder="confirm password"
+                            placeholder="Confirm Password"
                             onChange={this.handleChange}
                             value={this.state.password2}
                             name="password2"
                         />
                         <button type="submit">Register</button>
-                        <button onClick={()=>{this.props.history.push('/')}}>Go Back</button>
+                        <button onClick={() => { this.props.history.push('/') }}>Back to Home</button>
                     </form>
                 </div>
             </div>
