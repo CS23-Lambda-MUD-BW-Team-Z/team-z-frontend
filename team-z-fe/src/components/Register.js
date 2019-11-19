@@ -10,7 +10,7 @@ export default class Register extends React.Component {
     handleChange = event => {
         this.setState({ [event.target.name]: event.target.value })
     };
-
+//comments
     handleSubmit = event => {
         event.preventDefault();
         const endpoint = "https://lambda-mud-test.herokuapp.com/api/registration/";
@@ -31,7 +31,7 @@ export default class Register extends React.Component {
         return (
             <div className="register-container">
                 <div className="register-page">
-                    Create an Accounts
+                    Create an Account
                     <form onSubmit={this.handleSubmit}>
                         <input
                             type="text"
