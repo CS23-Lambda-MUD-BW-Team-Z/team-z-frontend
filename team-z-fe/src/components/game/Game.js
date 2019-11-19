@@ -5,7 +5,7 @@ import Movements from './Movements'
 
 function Game( {setUser, user, history,loginKey} ) {
     const [rooms,setRooms] = useState([])
-    // const [name, setName] = useState(null)
+    // const [user, setName] = useState(null)
 
     useEffect(()=>{
         if (localStorage.getItem('token')!=null) {
@@ -29,8 +29,9 @@ function Game( {setUser, user, history,loginKey} ) {
     useEffect(()=> {
         axios.get('https://lambda-mud-test.herokuapp.com/api/adv/rooms/')
         .then( res => {
-            console.log(res.data)
-            setRooms(res.data.rooms)
+           
+            
+            setRooms(JSON.parse(res.data.rooms))
         })
 
     }, [])
@@ -40,10 +41,41 @@ function Game( {setUser, user, history,loginKey} ) {
         history.push('/')
     }
 
-  
-    //let current = rooms.filter(room => room.title === user.title && room.description === user.description)
+    
+    console.log(rooms)
+    let current = rooms.filter(room => room.fields.title === user.title && room.fields.description === user.description)
 
-    //console.log(current)
+    current = current[0]
+    console.log(current)
+
+    if (current && current.fields.n_to === 0) { //if current room's 'n_to' points to 0, it is unavailable
+           // using local storage as using a state cause an infinite loop
+            localStorage.setItem('north', 'false') // set storage of north to false
+            
+        /// repeat pattern below
+        } else {
+          
+            localStorage.setItem('north', 'true')
+        }
+    
+        if (current && current.fields.s_to === 0) {
+            localStorage.setItem('south', 'false')
+        } else {
+            localStorage.setItem('south', 'true')
+        }
+    
+        if (current && current.fields.e_to === 0) {
+            localStorage.setItem('east', 'false')
+        } else {
+            localStorage.setItem('east', 'true')
+        }
+    
+        if (current && current.fields.w_to === 0) {
+            localStorage.setItem('west', 'false')
+        } else {
+            localStorage.setItem('west', 'true')
+        }
+
     return (
         <div>
             <h2>{user.name}</h2>

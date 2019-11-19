@@ -10,12 +10,14 @@ import '../../styles/movement.scss'
 function Movements( {setUser, user, history} ) {
 
     
-    // const [name, setName] = useState(null)
+    const [loading, setLoading] = useState(false)
     const move = (e) => {
+        setLoading(true)
         axios.post('https://lambda-mud-test.herokuapp.com/api/adv/move', {direction: e})
         .then( res => {
             console.log(res)
             setUser({...res.data})
+            setLoading(false)
         })
     }
 
@@ -30,29 +32,42 @@ function Movements( {setUser, user, history} ) {
     return (
         <section className="movements">
             <section className="arrow-row">
-              
-                <FontAwesomeIcon 
-                className="arrow" 
-                onClick={()=> { move('n')}} 
-                icon={faArrowAltCircleUp} /> 
+              {console.log(loading)}
+                {localStorage.getItem('north') === 'true' ?
+                //if going north is true display active arrow, if false display disabled arrow
+                //***  repeat for all arrows/
+                <FontAwesomeIcon className="arrow" onClick={()=> {
+                    if (loading === false && localStorage.getItem('north') === 'true') {
+                        move('n') 
+                    } 
+                   
+                }} icon={faArrowAltCircleUp} /> : <FontAwesomeIcon className='disabled' icon={faArrowAltCircleUp} /> }
+
             </section>
             <section className="arrow-row__center">
-            <FontAwesomeIcon 
-            className="arrow" 
-            onClick={()=> { move('w')}} 
-            icon={faArrowAltCircleLeft} /> 
-
-            <FontAwesomeIcon 
-                className="arrow" 
-                onClick={()=> { move('e')}} 
-                icon={faArrowAltCircleRight} />   
+                {localStorage.getItem('west') === 'true' ?
+                <FontAwesomeIcon className="arrow"  onClick={()=> {
+                    if (loading === false && localStorage.getItem('west') === 'true') {
+                        move('w') 
+                    }
+                   
+                }} icon={faArrowAltCircleLeft} />  : <FontAwesomeIcon className='disabled' icon={faArrowAltCircleLeft} />  }
+                {localStorage.getItem('east') === 'true' ? 
+                <FontAwesomeIcon className="arrow"  onClick={()=> {
+                    if (loading === false && localStorage.getItem('east') === 'true') {
+                        move('e') 
+                    }
+                   
+                }} icon={faArrowAltCircleRight} /> : <FontAwesomeIcon className='disabled' icon={faArrowAltCircleRight} /> }
             </section>
             <section className="arrow-row">
-
-            <FontAwesomeIcon 
-                className="arrow" 
-                onClick={()=> { move('s')}} 
-                icon={faArrowAltCircleDown} /> 
+            {localStorage.getItem('south') === 'true' ?
+            <FontAwesomeIcon className="arrow"  onClick={()=> {
+                if (loading === false && localStorage.getItem('south') === 'true') {
+                    move('s') 
+                } 
+               
+            }} icon={faArrowAltCircleDown} /> : <FontAwesomeIcon className='disabled' icon={faArrowAltCircleDown} /> }
             </section>
         </section>
     )
