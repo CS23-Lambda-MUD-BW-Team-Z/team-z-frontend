@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom';
+
 export default class Register extends React.Component {
     state = {
         username: "",
@@ -59,6 +61,10 @@ export default class Register extends React.Component {
                         <button type="submit">Register</button>
                         <button onClick={() => { this.props.history.push('/') }}>Back to Home</button>
                     </form>
+                    <p className="login-register-link">
+                        Already have an account?
+                        <Link className="login-redirect" to="/login"> Login here!</Link>
+                    </p>
                 </div>
             </div>
         )

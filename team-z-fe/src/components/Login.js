@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 export default class Login extends React.Component {
     state = {
@@ -33,8 +34,8 @@ export default class Login extends React.Component {
         return (
             <div className="login-container">
                 <div className="login-page">
-                    <h1 className="title">Log into your Account</h1>
-                    <p className="subtitle">You must be logged into your account in order to play</p>
+                    <h1 className="title">Login to Play</h1>
+                    <p className="subtitle">You must be logged into your account in order to play.</p>
                     <form onSubmit={(event) => this.handleSubmit(event)}>
                         <input
                             type="text"
@@ -53,6 +54,10 @@ export default class Login extends React.Component {
                         <button type="submit">Login</button>
                         <button onClick={() => { this.props.history.push('/') }}>Back to Home</button>
                     </form>
+                    <p className="login-register-link">
+                        Don't have an account yet?
+                        <Link className="signup-redirect" to="/register"> Register here!</Link>
+                    </p>
                 </div>
             </div>
         )
