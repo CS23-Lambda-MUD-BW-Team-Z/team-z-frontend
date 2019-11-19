@@ -51,6 +51,7 @@ export default class Login extends React.Component {
                                 name="password"
                             />
                             <button type="submit">Login</button>
+                            <button type="submit" onClick={()=>{this.props.history.push('/')}}>Go Back</button>
                         </form>
                     </div>
                 </div>
