@@ -1,7 +1,7 @@
 [build]
-base = "/"
+base = "team-z-fe/"
 publish = "build/"
-command = "yarn build"
+command = "yarn run build"
 
 [[redirects]]
   from = "/*"
