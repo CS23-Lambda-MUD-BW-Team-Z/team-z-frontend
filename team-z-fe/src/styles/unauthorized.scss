@@ -1,0 +1,21 @@
+.unauthorized-container {
+  .unauthorized-title {
+    font-size: 50px;
+    font-weight: 700;
+  }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+
+  a {
+    color: $red4;
+
+    &:hover {
+      color: $red2;
+    }
+  }
+}
