@@ -1,0 +1,76 @@
+.text-container {
+  margin: 150px;
+
+  .title {
+    font-family: Lato, sans-serif;
+    color: #383651;
+    font-size: 50px;
+    line-height: 56px;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .subtitle {
+    width: 40%;
+    margin-top: 20px;
+    font-family: Lato, sans-serif;
+    color: #383651;
+    font-size: 19px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+
+  .button {
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-transition: background-color 400ms ease, opacity 400ms ease;
+    transition: background-color 400ms ease, opacity 400ms ease;
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0px;
+
+    .landing-link {
+      border-radius: 0px;
+      background-color: #bb1333;
+      padding: 12px 25px;
+      color: #fff;
+      font-family: Lato, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+    }
+
+    .landing-link:hover {
+      filter: brightness(0.8);
+    }
+  }
+}
+
+.top-container {
+  display: flex;
+  height: 72vh;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: url("../components/images/University_Image.jpeg");
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.bottom-container {
+  display: flex;
+  height: 28vh;
+  justify-content: center;
+
+  .text-container {
+    margin: 0;
+  }
+
+  .button {
+    text-align: center;
+  }
+}

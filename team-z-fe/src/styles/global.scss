@@ -1,0 +1,33 @@
+//global styling
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box !important;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #f6f7fb;
+}
+
+li,
+input,
+label,
+textarea {
+  font-family: "Lato", sans-serif;
+}
+
+ul {
+  padding: 0;
+}
+hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  width: 100%;
+  margin: 20px 0;
+}
+
+a {
+  text-decoration: none;
+}
