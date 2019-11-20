@@ -13,7 +13,7 @@ function Movements( {setUser, user, history} ) {
     const [loading, setLoading] = useState(false)
     const move = (e) => {
         setLoading(true)
-        axios.post('https://lambda-mud-test.herokuapp.com/api/adv/move', {direction: e})
+        axios.post('https://lambda-university.herokuapp.com/api/adv/move/', {direction: e})
         .then( res => {
             console.log(res)
             setUser({...res.data})

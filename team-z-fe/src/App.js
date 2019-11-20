@@ -6,6 +6,8 @@ import axios from 'axios';
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Landing from "./components/Landing";
+import Unauthorized from "./components/Unauthorized";
+import PrivateRoute from "./components/PrivateRoute";
 
 const App = () => {
 
@@ -56,12 +58,15 @@ const App = () => {
           <Route exact path="/" component={Landing} />
           <Route exact path="/login" render={(props) => <Login {...props} loginKey={loginKey} />} />
           <Route exact path="/register" render={(props) => <Register {...props} user={user} setUser={setUser} />} />
-
-
+          <Route path="/unauthorized" component={Unauthorized} />
+          
+          
           <Route
             path='/game'
             render={(props) => <Game {...props} user={user} setUser={setUser} loginKey={loginKey} />}
           />
+
+        
 
         </>
       </div>
