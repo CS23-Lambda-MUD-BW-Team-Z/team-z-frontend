@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import { props } from 'bluebird'
 import Movements from './Movements'
-
+import Map from './Map'
 function Game( {setUser, user, history,loginKey} ) {
     const [rooms,setRooms] = useState([])
     // const [user, setName] = useState(null)
@@ -82,6 +82,7 @@ function Game( {setUser, user, history,loginKey} ) {
             <h3>{user.title}</h3>
             <p>{user.description}</p>
             <Movements setUser={setUser}  />
+            <Map rooms={rooms}/>
             <button onClick={logout}>Log Out</button>
         </div>
     )
