@@ -7,8 +7,11 @@ import '../../../node_modules/react-vis/dist/style.css';
 import {XYPlot, LineSeries} from 'react-vis';
 
 
-function Map( {setUser, user, history,rooms} ) {
- 
+function Map( {setUser, user, history} ) {
+    const [rooms, setRooms] = useState([])
+    useEffect(() => {
+        setRooms(localStorage.getItem('rooms'))
+    })
 
     const data = [
         {x: 0, y: 8},
@@ -31,7 +34,8 @@ function Map( {setUser, user, history,rooms} ) {
         <div className="map-container">
         
         {
-            rooms.map(room => room
+            
+            
             // <div className={`${room.title} room-container`} 
             // style={{borderLeft: rooms[0] && 
             // room.fields.w_to === 0 ? "2px solid red" : "none",
@@ -44,7 +48,7 @@ function Map( {setUser, user, history,rooms} ) {
                 
             // </div>
                 
-                )
+                
 
         }
         <XYPlot height={300} width={300}>

@@ -26,18 +26,23 @@ function Game( {setUser, user, history,loginKey} ) {
 
     }, [axios,setUser])
 
-    useEffect(()=> {
-        axios.get('https://lambda-university.herokuapp.com/api/adv/rooms/')
-        .then( res => {
-            // console.log(res.data.length)
-            
-            //setRooms(res.data)
-            // let new_data = []
-            
-            setRooms(res.data)
-        })
+    useEffect(()=>{
+        let grabber = async ()=>{
+            try {
+                let req = await axios.get('https://lambda-university.herokuapp.com/api/adv/rooms/')
+                let data = await req.data
+                console.log(data)
+                setRooms(data)
+                
+            } catch (error) {
+                console.error('couldn\'t fetch rooms',{...error});
+            }
+        }
+        if(rooms.length==0){
+            grabber()
+        }
+    },[rooms])
 
-    }, [])
 
     const logout = () => {
         localStorage.removeItem('token')
@@ -46,38 +51,38 @@ function Game( {setUser, user, history,loginKey} ) {
 
     
     console.log(rooms)
-    let current = rooms.filter(room => room.title === user.title && room.description === user.description)
+    // let current = rooms.filter(room => room.title === user.title && room.description === user.description)
 
-    current = current[0]
-    console.log(current)
+    // current = current[0]
+    // console.log(current)
 
-    if (current && current.n_to === 0) { //if current room's 'n_to' points to 0, it is unavailable
-           // using local storage as using a state cause an infinite loop
-            localStorage.setItem('north', 'false') // set storage of north to false
+    // if (current && current.n_to === 0) { //if current room's 'n_to' points to 0, it is unavailable
+    //        // using local storage as using a state cause an infinite loop
+    //         localStorage.setItem('north', 'false') // set storage of north to false
             
-        /// repeat pattern below
-        } else {
+    //     /// repeat pattern below
+    //     } else {
           
-            localStorage.setItem('north', 'true')
-        }
+    //         localStorage.setItem('north', 'true')
+    //     }
     
-        if (current && current.s_to === 0) {
-            localStorage.setItem('south', 'false')
-        } else {
-            localStorage.setItem('south', 'true')
-        }
+    //     if (current && current.s_to === 0) {
+    //         localStorage.setItem('south', 'false')
+    //     } else {
+    //         localStorage.setItem('south', 'true')
+    //     }
     
-        if (current && current.e_to === 0) {
-            localStorage.setItem('east', 'false')
-        } else {
-            localStorage.setItem('east', 'true')
-        }
+    //     if (current && current.e_to === 0) {
+    //         localStorage.setItem('east', 'false')
+    //     } else {
+    //         localStorage.setItem('east', 'true')
+    //     }
     
-        if (current && current.w_to === 0) {
-            localStorage.setItem('west', 'false')
-        } else {
-            localStorage.setItem('west', 'true')
-        }
+    //     if (current && current.w_to === 0) {
+    //         localStorage.setItem('west', 'false')
+    //     } else {
+    //         localStorage.setItem('west', 'true')
+    //     }
 
     return (
         <div>
