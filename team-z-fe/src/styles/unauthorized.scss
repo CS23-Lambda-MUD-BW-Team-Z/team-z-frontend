@@ -1,0 +1,25 @@
+.unauthorized-container {
+  background-color: $blue6;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  .unauthorized-title {
+    font-size: 180px;
+  }
+  .unauthorized-subtitle {
+    color: white;
+  }
+  a {
+    color: $red4;
+
+    &:hover {
+      filter: brightness(0.4);
+    }
+  }
+}

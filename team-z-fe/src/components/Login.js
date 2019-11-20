@@ -1,9 +1,11 @@
 import React from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 export default class Login extends React.Component {
     state = {
         username: "",
+        email: "",
         password: "",
     }
 
@@ -14,8 +16,10 @@ export default class Login extends React.Component {
     handleSubmit = event => {
         event.preventDefault();
         // this.props.login(this.state)
+
         
         const endpoint = "https://lambda-university.herokuapp.com/api/login/"
+
         axios
             .post(endpoint, this.state)
             .then(res => {
@@ -54,6 +58,7 @@ export default class Login extends React.Component {
                             <button type="submit" onClick={()=>{this.props.history.push('/')}}>Go Back</button>
                         </form>
                     </div>
+
                 </div>
             </div>
         )
