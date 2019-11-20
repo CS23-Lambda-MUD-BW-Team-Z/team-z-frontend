@@ -15,7 +15,7 @@ export default class Login extends React.Component {
         event.preventDefault();
         // this.props.login(this.state)
         
-        const endpoint = "https://lambda-mud-test.herokuapp.com/api/login/"
+        const endpoint = "https://lambda-university.herokuapp.com/api/login/"
         axios
             .post(endpoint, this.state)
             .then(res => {

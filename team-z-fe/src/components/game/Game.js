@@ -18,7 +18,7 @@ function Game( {setUser, user, history,loginKey} ) {
 
 
     useEffect(()=> {
-        axios.get('https://lambda-mud-test.herokuapp.com/api/adv/init/')
+        axios.get('https://lambda-university.herokuapp.com/api/adv/init')
         .then( res => {
             console.log(res)
             setUser({...res.data})
@@ -27,11 +27,14 @@ function Game( {setUser, user, history,loginKey} ) {
     }, [axios,setUser])
 
     useEffect(()=> {
-        axios.get('https://lambda-mud-test.herokuapp.com/api/adv/rooms/')
+        axios.get('https://lambda-university.herokuapp.com/api/adv/rooms/')
         .then( res => {
-           
+            // console.log(res.data.length)
             
-            setRooms(JSON.parse(res.data.rooms))
+            //setRooms(res.data)
+            // let new_data = []
+            
+            setRooms(res.data)
         })
 
     }, [])
@@ -43,12 +46,12 @@ function Game( {setUser, user, history,loginKey} ) {
 
     
     console.log(rooms)
-    let current = rooms.filter(room => room.fields.title === user.title && room.fields.description === user.description)
+    let current = rooms.filter(room => room.title === user.title && room.description === user.description)
 
     current = current[0]
     console.log(current)
 
-    if (current && current.fields.n_to === 0) { //if current room's 'n_to' points to 0, it is unavailable
+    if (current && current.n_to === 0) { //if current room's 'n_to' points to 0, it is unavailable
            // using local storage as using a state cause an infinite loop
             localStorage.setItem('north', 'false') // set storage of north to false
             
@@ -58,19 +61,19 @@ function Game( {setUser, user, history,loginKey} ) {
             localStorage.setItem('north', 'true')
         }
     
-        if (current && current.fields.s_to === 0) {
+        if (current && current.s_to === 0) {
             localStorage.setItem('south', 'false')
         } else {
             localStorage.setItem('south', 'true')
         }
     
-        if (current && current.fields.e_to === 0) {
+        if (current && current.e_to === 0) {
             localStorage.setItem('east', 'false')
         } else {
             localStorage.setItem('east', 'true')
         }
     
-        if (current && current.fields.w_to === 0) {
+        if (current && current.w_to === 0) {
             localStorage.setItem('west', 'false')
         } else {
             localStorage.setItem('west', 'true')

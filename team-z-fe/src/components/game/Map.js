@@ -31,18 +31,18 @@ function Map( {setUser, user, history,rooms} ) {
         <div className="map-container">
         
         {
-            rooms.map(room => 
-            <div className={`${room.fields.title} room-container`} 
-            style={{borderLeft: rooms[0] && 
-            room.fields.w_to === 0 ? "2px solid red" : "none",
-            borderRight: rooms[0] && 
-            room.fields.e_to === 0 ? "2px solid red" : "none",
-            borderBottom: rooms[0] && 
-            room.fields.s_to === 0 ? "2px solid red" : "none",
-            borderTop: rooms[0] && 
-            room.fields.n_to === 0 ? "2px solid red" : "none",}}>
+            rooms.map(room => room
+            // <div className={`${room.title} room-container`} 
+            // style={{borderLeft: rooms[0] && 
+            // room.fields.w_to === 0 ? "2px solid red" : "none",
+            // borderRight: rooms[0] && 
+            // room.fields.e_to === 0 ? "2px solid red" : "none",
+            // borderBottom: rooms[0] && 
+            // room.fields.s_to === 0 ? "2px solid red" : "none",
+            // borderTop: rooms[0] && 
+            // room.fields.n_to === 0 ? "2px solid red" : "none",}}>
                 
-            </div>
+            // </div>
                 
                 )
 

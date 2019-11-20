@@ -13,7 +13,7 @@ export default class Register extends React.Component {
 //comments
     handleSubmit = event => {
         event.preventDefault();
-        const endpoint = "https://lambda-mud-test.herokuapp.com/api/registration/";
+        const endpoint = "https://lambda-university.herokuapp.com/api/registration/";
         axios
             .post(endpoint, this.state)
             .then(res => {
