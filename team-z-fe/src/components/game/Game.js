@@ -5,7 +5,7 @@ import Movements from './Movements'
 import Map from './Map'
 function Game( {setUser, user, history,loginKey} ) {
     const [rooms,setRooms] = useState([])
-    // const [user, setName] = useState(null)
+    const [currentroom, setCurrentRoom] = useState()
 
     useEffect(()=>{
         if (localStorage.getItem('token')!=null) {
@@ -35,7 +35,13 @@ function Game( {setUser, user, history,loginKey} ) {
             try {
                 let req = await axios.get('https://lambda-university.herokuapp.com/api/adv/rooms/')
                 let data = await req.data
-                console.log(data)
+                // data[78].title = "Career Building Back Hallway"
+                // data[78].description = "Leads to the back of the Career Building"
+                
+                // for (let i=0; i< data.length; i++) {
+                //     console.log(data[i].id + `: ${i}`)
+                //     data[i].id = i
+                // }
                 setRooms(data)
                 
             } catch (error) {
@@ -57,9 +63,22 @@ function Game( {setUser, user, history,loginKey} ) {
     
     console.log(rooms)
     let current = rooms.filter(room => room.title === user.title && room.description === user.description)
-
+    
+    
     current = current[0]
-    console.log(current)
+    
+    current && localStorage.setItem('id', current.id)
+
+    
+    //current && setCurrentRoom(current)
+    
+    // if (current) {
+    //     const currentroom = document.querySelector('.room-134')
+    //     console.log(currentroom)
+    //     console.log('hello')
+    // }
+    // let currentroom = document.querySelector(`.room-${current.id}`)
+    // currentroom.classList.toggle('on')
 
     if (current && current.n_to === 0) { //if current room's 'n_to' points to 0, it is unavailable
            // using local storage as using a state cause an infinite loop
@@ -91,11 +110,12 @@ function Game( {setUser, user, history,loginKey} ) {
 
     return (
         <div>
+            
             <h2>{user.name}</h2>
             <h3>{user.title}</h3>
             <p>{user.description}</p>
             <Movements setUser={setUser}  />
-            <Map rooms={rooms}/>
+            <Map rooms={rooms} current={current} />
             <button onClick={logout}>Log Out</button>
         </div>
     )
