@@ -16,8 +16,8 @@ export default class Login extends React.Component {
     handleSubmit = event => {
         event.preventDefault();
         // this.props.login(this.state)
-
-        const endpoint = "https://lambda-mud-test.herokuapp.com/api/login/"
+        
+        const endpoint = "https://lambda-university.herokuapp.com/api/login/"
         axios
             .post(endpoint, this.state)
             .then(res => {
@@ -35,37 +35,27 @@ export default class Login extends React.Component {
         return (
             <div className="login-container">
                 <div className="login-page">
-                    <h1 className="title">Login to Play</h1>
-                    <p className="subtitle">You must be logged into your account in order to play.</p>
-                    <form onSubmit={(event) => this.handleSubmit(event)}>
-                        <input
-                            type="text"
-                            placeholder="username"
-                            onChange={this.handleChange}
-                            value={this.state.username}
-                            name="username"
-                        />
-                        <input
-                            type="text"
-                            placeholder="email"
-                            onChange={this.handleChange}
-                            value={this.state.email}
-                            name="email"
-                        />
-                        <input
-                            type="password"
-                            placeholder="password"
-                            onChange={this.handleChange}
-                            value={this.state.password}
-                            name="password"
-                        />
-                        <button type="submit">Login</button>
-                        <button onClick={() => { this.props.history.push('/') }}>Back to Home</button>
-                    </form>
-                    <p className="login-register-link">
-                        Don't have an account yet?
-                        <Link className="signup-redirect" to="/register"> Register here!</Link>
-                    </p>
+                    Please Log In
+                    <div className="login-form">
+                        <form onSubmit={(event) => this.handleSubmit(event)}>
+                            <input
+                                type="text"
+                                placeholder="username"
+                                onChange={this.handleChange}
+                                value={this.state.username}
+                                name="username"
+                            />
+                            <input
+                                type="password"
+                                placeholder="password"
+                                onChange={this.handleChange}
+                                value={this.state.password}
+                                name="password"
+                            />
+                            <button type="submit">Login</button>
+                            <button type="submit" onClick={()=>{this.props.history.push('/')}}>Go Back</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         )
