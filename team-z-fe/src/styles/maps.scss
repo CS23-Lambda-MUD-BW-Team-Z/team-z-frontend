@@ -1,45 +1,394 @@
 .map-container {
   display: grid;
-  grid-template-columns: 11.11% 11.11% 11.11% 11.11% 11.11% 11.11% 11.11% 11.11% 11.11%;
+  grid-template-columns: 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44%;
   grid-template-rows: auto;
   grid-template-areas:
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . courtyardMiddle . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . square 103 . . . ."
-    " . . . . 102 . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . .";
-
-  .room-container {
+   
+ ".    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .    .    .    .    .    .   r268  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .    .    .    .    .    .      .  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .    .    .    .   r269    . r271    . r270  .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .    .    .    .    .    .      .  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .   r275  .    .   r273  .   r267    . r265    . r266  .   r252  .    .   r257  .    .    .    .    .    .    ."
+".    .    .    .    .    .    .      .  .    .      .  .    .    .      .  .    .    .      .  .    .      .  .    .    .    .    .    .    ."
+".    .    .    .    .    .    .      .  .    .      .  .    .    .      .  .    .    .      .  .    .      .  .    .    .    .    .    .    ."
+".    .    .    .   r277    .    . r278    .    . r272    .    .    . r205    .    .    . r251    .    . r254    .    . r255  .    .    .    ."
+".    .    .    .    .    .    .      .  .    .      .  .    .    .      .  .    .    .      .  .    .      .  .    .    .    .    .    .    ."
+".    .    .    .    .    .    .      .  .    .      .  .    .    .      .  .    .    .      .  .    .      .  .    .    .    .    .    .    ."
+".    .    .    .    .    .    .   r276  .    .   r274  .    .    .      .  .    .    .   r253  .    .   r256  .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .    .    .    .    .    .      .  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .    .    .    .    .    .      .  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .   r214  .    .    .    .      .  .    .    .    .   r221  .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .      .  .    .    .    .      .  .    .    .    .      .  .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .   .r213     r215     r212.  .    .      .  .    .   r220    . r222    . r219  .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .      .  .    .    .    .      .  .    .    .    .      .  .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .      .  .    .    .    .      .  .    .    .    .      .  .    .    .    .    .    .    .    .    ."
+".    .   r240  .    .   r239  .   .r211     r209     r210.  .    .      .  .    .   r218    . r216    . r217  .   r232  .    .   r233    .    ."
+".    .      .  .    .      .  .    .    .      .  .    .    .    .      .  .    .    .    .      .  .    .    .      .  .    .      .  .    ."
+"r241    . r142    .    . r237    .    .    . r208    .    .    .    . r206    .    .    .    . r207    .    .    . r230    .    . r236    . r234"
+".    .      .  .    .      .  .    .    .      .  .    .    .    .      .  .    .    .    .      .  .    .    .      .  .    .   r235  .    ."
+".    .   r242  .    .   r238  .   .r249     r244     r248.  .    .      .  .    .   r225    . r223    . r224  .   r231  .    .    .    .    ."
+".    .    .    .    .    .    .    .    .      .  .    .    .    .      .  .    .    .    .      .  .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .      .  .    .    .    .      .  .    .    .    .      .  .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .   .r246     r250     r247.  .    .      .  .    .   r227    . r229    . r226  .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .      .  .    .    .    .      .  .    .    .    .   r228  .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .   r245  .    .    .    .      .  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .    .    .    .    .    .      .  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .    .    .    .    .    .      .  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .   r297  .    .    .    .      .  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .      .  .    .    .    .      .  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .  . r296     r294     r295 .  .    .      .  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .      .  .    .    .    .      .  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .      .  .    .    .    .      .  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .   r301  .    .   r299  .   .r292     r284     r293 . r280  .      .  .    .    .    .   r259  .    .   r264  .    .    .    .    .    ."
+".    .      .  .    .      .  .    .    .      .  .    .      .  .      .  .    .    .    .      .  .    .      .  .    .    .    .    .    ."
+"r302    . r300    .    . r285    .    .    . r282    .    . r279    . r204    .    .    .    . r258    .    . r261    .    . r262 .    .    ."
+".    .      .  .    .      .  .    .    .      .  .    .      .  .      .  .    .    .    .      .  .    .      .  .    .    .    .    .    ."
+".    .   r303  .    .   r298  .  . r286     r283    r287  . r281  . r203  .    .    .    .   r260  .    .   r263  .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .      .  .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .      .  .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    . .  r290     r288     r289 . .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .      .  .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+".    .    .    .    .    .    .    .    .   r291  .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .";
+  
+.room-container {
     width: 2rem;
     height: 2rem;
-    margin: 1rem;
     padding: 2px;
-    background-color: black;
+    background-color: lightgrey;
   }
 
-  .room-102 {
-    grid-area: welcomeCenter;
+  .room-203 {
+    grid-area: r203;
   }
 
-  .room-103 {
-    grid-area: courtyardSouth;
+  .room-204 {
+    grid-area: r204;
+  }
+
+  .room-205 {
+    grid-area: r205;
+  }
+
+
+  .room-206 {
+    grid-area: r206;
+  }
+  .room-207 {
+    grid-area: r207;
+  }
+  .room-208 {
+    grid-area: r208;
+  }
+  .room-209 {
+    grid-area: r209;
+  }
+  .room-210 {
+    grid-area: r210;
+  }
+  .room-211 {
+    grid-area: r211;
+  }
+
+.room-212 {
+    grid-area: r212;
+}
+
+
+.room-213 {
+    grid-area: r213;
+}
+
+
+.room-214 {
+    grid-area: r214;
+}
+
+.room-215 {
+grid-area: r215;
+}
+
+.room-216 {
+grid-area: r216;
+}
+
+
+.room-217 {
+grid-area: r217;
+}
+.room-218 {
+grid-area: r218;
+}
+.room-219 {
+grid-area: r219;
+}
+.room-220 {
+grid-area: r220;
+}
+.room-221 {
+grid-area: r221;
+}
+.room-222 {
+grid-area: r222;
+}
+
+
+.room-223 {
+    grid-area: r223;
+}
+
+
+.room-224 {
+    grid-area: r224;
+}
+
+.room-225 {
+grid-area: r225;
+}
+
+.room-226 {
+grid-area: r226;
+}
+
+
+.room-227 {
+grid-area: r227;
+}
+.room-228 {
+    grid-area: r228;
+    }
+    .room-229 {
+    grid-area: r229;
+    }
+    .room-230 {
+    grid-area: r230;
+    }
+    .room-231 {
+    grid-area: r231;
+    }
+    .room-232 {
+    grid-area: r232;
+    }
+    .room-233 {
+      grid-area: r233;
+    }
+    .room-234 {
+      grid-area: r234;
+    }
+    .room-235 {
+    grid-area: r235;
+    }
+    .room-236 {
+    grid-area: r236;
+    }
+    .room-237 {
+    grid-area: r237;
+    }
+    .room-238 {
+    grid-area: r238;
+    }
+    .room-239 {
+    grid-area: r239;
+    }
+    .room-240 {
+    grid-area: r240;
+    }
+    .room-241 {
+    grid-area: r241;
+    }
+    .room-242 {
+    grid-area: r242;
+    }
+    .room-243 {
+        grid-area: r243;
+    }
+    .room-244 {
+        grid-area: r244;
+    }
+    .room-245 {
+    grid-area: r245;
+    }
+    .room-246 {
+    grid-area: r246;
+    }
+    .room-247 {
+    grid-area: r247;
+    }
+    .room-248 {
+    grid-area: r248;
+    }
+    .room-249 {
+    grid-area: r249;
+    }
+    .room-250 {
+    grid-area: r250;
+    }
+    .room-251 {
+    grid-area: r251;
+    }
+
+    .room-252 {
+        grid-area: r252;
+        }
+        .room-253 {
+            grid-area: r253;
+        }
+        .room-254 {
+            grid-area: r254;
+        }
+
+        .room-255 {
+            grid-area: r255;
+        }
+        .room-256 {
+        grid-area: r256;
+        }
+        .room-257 {
+        grid-area: r257;
+        }
+        .room-258 {
+        grid-area: r258;
+        }
+        .room-259 {
+        grid-area: r259;
+        }
+        .room-260 {
+        grid-area: r260;
+        }
+        .room-261 {
+        grid-area: r261;
+        }
+        .room-262 {
+        grid-area: r262;
+        }
+        .room-263 {
+        grid-area: r263;
+        }
+        .room-264 {
+            grid-area: r264;
+        }
+        .room-265 {
+            grid-area: r265;
+        }
+        .room-266 {
+        grid-area: r266;
+        }
+        .room-267 {
+        grid-area: r267;
+        }
+        
+
+    .room-268 {
+    grid-area: r268;
+  }
+  .room-269 {
+    grid-area: r269;
+  }
+  .room-270 {
+    grid-area: r270;
+  }
+  .room-271 {
+    grid-area: r271;
+  }
+  .room-272 {
+    grid-area: r272;
+  }
+  .room-273 {
+    grid-area: r273;
+  }
+  .room-274 {
+    grid-area: r274;
+  }
+  .room-275 {
+    grid-area: r275;
+  }
+  .room-276 {
+    grid-area: r276;
+  }
+  .room-277 {
+    grid-area: r277;
+  }
+  .room-278 {
+    grid-area: r278;
+  }
+  .room-279 {
+    grid-area: r279;
+  }
+  .room-280 {
+    grid-area: r280;
+  }
+  .room-281 {
+    grid-area: r281;
+  }
+  .room-282 {
+    grid-area: r282;
+  }
+  .room-283 {
+    grid-area: r283;
+  }
+  .room-284 {
+    grid-area: r284;
+  }
+  .room-285 {
+    grid-area: r285;
+  }
+  .room-286 {
+    grid-area: r286;
+  }
+  .room-287 {
+    grid-area: r287;
+  }
+  .room-288 {
+    grid-area: r288;
+  }
+  .room-289 {
+    grid-area: r289;
+  }
+  .room-290 {
+    grid-area: r290;
+  }
+  .room-291 {
+    grid-area: r291;
+  }
+  .room-292 {
+    grid-area: r292;
+  }
+  .room-293 {
+    grid-area: r293;
+  }
+  .room-294 {
+    grid-area: r294;
+  }
+  .room-295 {
+    grid-area: r295;
+  }
+  .room-296 {
+    grid-area: r296;
+  }
+  .room-297 {
+    grid-area: r297;
+  }
+  .room-298 {
+    grid-area: r298;
+  }
+  .room-299 {
+    grid-area: r299;
+  }
+  .room-300 {
+    grid-area: r300;
+  }
+  .room-301 {
+    grid-area: r301;
+  }
+  .room-302 {
+    grid-area: r302;
+  }
+  .room-303 {
+    grid-area: r303;
   }
 }
+
+
 
 // grid-template-rows: auto;
 //   grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
