@@ -35,8 +35,8 @@ export default class Login extends React.Component {
         return (
             <div className="login-container">
                 <div className="login-page">
-                    Please Log In
-                    <div className="login-form">
+                    <h1 className="title">Log In</h1>
+                    <p className="subtitle">Your journey awaits you.</p>
                         <form onSubmit={(event) => this.handleSubmit(event)}>
                             <input
                                 type="text"
@@ -55,7 +55,10 @@ export default class Login extends React.Component {
                             <button type="submit">Login</button>
                             <button type="submit" onClick={()=>{this.props.history.push('/')}}>Go Back</button>
                         </form>
-                    </div>
+                    <p className="login-register-link">
+                        Don't have an account yet?
+                        <Link className="login-redirect" to="/register"> Register here!</Link>
+                    </p>
                 </div>
             </div>
         )
