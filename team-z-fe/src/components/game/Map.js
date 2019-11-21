@@ -8,6 +8,11 @@ import { XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines, LineSerie
 
 
 function Map({ setUser, user, history, rooms }) {
+    console.log('user data', user)
+    console.log('user players data', user.players)
+    console.log('room data', rooms)
+    console.log('room players data', rooms.players)
+    console.log('set user data', setUser)
 
     const data = [
         { x: 1, y: 10 },
@@ -17,6 +22,9 @@ function Map({ setUser, user, history, rooms }) {
 
     return (
         <div className="map-container">
+            {user.players ? (
+                <p style={{ color: "white" }}>hello</p>
+            ) : null}
             {
                 rooms.map(room =>
                     <div className={`room-${room.id} room-container`}
@@ -31,12 +39,18 @@ function Map({ setUser, user, history, rooms }) {
                                 room.n_to === 0 ? "2px solid red" : "none",
                         }}
                     >
+
+                        {console.log(user.players)}
+                        {/* {room.title === rooms.title ? (
+                            <i id='av-horse' className="fas fa-horse"></i>
+                            ) : (
+                                <i id='av-circle' className="fas fa-circle"></i>
+                            )} */}
                     </div>
                 )
-
-
-
             }
+
+
 
 
         </div>
