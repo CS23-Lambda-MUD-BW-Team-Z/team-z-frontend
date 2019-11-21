@@ -9,14 +9,19 @@ import {XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines, LineSeries
 
 function Map( {setUser, user, history, rooms} ) {
   
-    
+    const data = [
+    {x: 1, y: 10},
+    {x: 2, y: 5},
+    {x: 3, y: 15}
+    ]
+      
     return (
         <div className="map-container">
         
         {
             
             rooms.map(room => 
-            <div className={`${room.title} room-container`} 
+            <div id={room.id} className={`${room.title} room-container`} 
             style={{borderLeft: rooms[0] && 
             room.w_to === 0 ? "2px solid red" : "none",
             borderRight: rooms[0] && 
@@ -32,10 +37,7 @@ function Map( {setUser, user, history, rooms} ) {
                 
 
         }
-        <XYPlot height={300} width={300}>
         
-            <LineSeries data={rooms} />
-         </XYPlot>
             
         </div>
     )
