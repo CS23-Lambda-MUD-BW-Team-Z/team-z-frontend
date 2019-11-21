@@ -1,28 +1,54 @@
 .map-container {
   display: grid;
-  grid-template-columns: 11.11% 11.11% 11.11% 11.11% 11.11% 11.11% 11.11% 11.11% 11.11%;
+  grid-template-columns: 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44% 3.44%;
   grid-template-rows: auto;
   grid-template-areas:
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . courtyardMiddle . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . ."
-    " . . . square 103 . . . ."
-    " . . . . 102 . . . ."
-    " . . . . . . . . ."
-    " . . . . . . . . .";
+    ".    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .    .    .    .    .    .   r167  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .    .    .    .    .    .   path  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .    .    .    .   r168 path r170 path r169  .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .    .    .    .    .    .   path  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .   r174  .    .   r172  .   r166 path r164 path r165  .   r151  .    .   r156  .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .   path  .    .   path  .    .    .   path  .    .    .   path  .    .   path  .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .   path  .    .   path  .    .    .   path  .    .    .   path  .    .   path  .    .    .    .    .    .    ."
+    ".    .    .    .   r176 path path r177 path path r171 path path path r104 path path path r150 path path r153 path path r154  .    .    .    ."
+    ".    .    .    .    .    .    .   path  .    .   path  .    .    .   path  .    .    .   path  .    .   path  .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .   path  .    .   path  .    .    .   path  .    .    .   path  .    .   path  .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .   r175  .    .   r173  .    .    .   path  .    .    .   r152  .    .   r155  .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .    .    .    .    .    .   path  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .    .    .    .    .    .   path  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .   r113  .    .    .    .   path  .    .    .    .   r120  .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .   path  .    .    .    .   path  .    .    .    .   path  .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .   r112 path r114 path r111  .    .   path  .    .   r119 path r121 path r118  .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .   path  .    .    .    .   path  .    .    .    .   path  .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .   path  .    .    .    .   path  .    .    .    .   path  .    .    .    .    .    .    .    .    ."
+    ".    .   r139  .    .   r138  .   r110 path r108 path r109  .    .   path  .    .   r117 path r115 path r116  .   r131  .    .    .    .    ."
+    ".    .   path  .    .   path  .    .    .   path  .    .    .    .   path  .    .    .    .   path  .    .    .   path  .    .   path  .    ."
+    "r140 path r142 path path r136 path path path r107 path path path path r105 path path path path r106 path path path r129 path path r135 path r133"
+    ".    .   path  .    .   path  .    .    .   path  .    .    .    .   path  .    .    .    .   path  .    .    .   path  .    .   path  .    ."
+    ".    .   r141  .    .   r137  .   r148 path r143 path r147  .    .   path  .    .   r124 path r122 path r123  .   r130  .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .   path  .    .    .    .   path  .    .    .    .   path  .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .   path  .    .    .    .   path  .    .    .    .   path  .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .   r145 path r149 path r146  .    .   path  .    .   r126 path r128 path r125  .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .   path  .    .    .    .   path  .    .    .    .   r127  .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .   r144  .    .    .    .   path  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .    .    .    .    .    .   path  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .    .    .    .    .    .   path  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .   r196  .    .    .    .   path  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .   path  .    .    .    .   path  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .   r191 path r193 path r192  .    .   path  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .   path  .    .    .    .   path  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .   path  .    .    .    .   path  .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .   r200  .    .   r198  .    .   path r183 path  .   r179  .   path  .    .    .    .   r158  .    .   r163  .    .    .    .    .    ."
+    ".    .   path  .    .   path  .    .    .   path  .    .   path  .   path  .    .    .    .   path  .    .   path  .    .    .    .    .    ."
+    "r201 path r199 path path r184 path path path r181 path path r178 path r103 path path path path r157 path path r160 path path r161 .    .    ."
+    ".    .   path  .    .   path  .    .    .   path  .    .   path  .   path  .    .    .    .   path  .    .   path  .    .    .    .    .    ."
+    ".    .   r202  .    .   r197  .    .   path r182 path  .   r180  .   r102  .    .    .    .   r159  .    .   r162  .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .   path  .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .   path  .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .   r185 path r187 path r186  .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .   path  .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    ."
+    ".    .    .    .    .    .    .    .    .   r190  .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .";
 
   .room-container {
     width: 2rem;
@@ -33,11 +59,30 @@
   }
 
   .room-102 {
-    grid-area: welcomeCenter;
+    grid-area: r102;
   }
 
   .room-103 {
-    grid-area: courtyardSouth;
+    grid-area: r103;
+  }
+
+  .room-105 {
+    grid-area: r105;
+  }
+  .room-106 {
+    grid-area: r106;
+  }
+  .room-107 {
+    grid-area: r107;
+  }
+  .room-108 {
+    grid-area: r108;
+  }
+  .room-109 {
+    grid-area: r109;
+  }
+  .room-110 {
+    grid-area: r110;
   }
 }
 
