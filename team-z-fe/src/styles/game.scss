@@ -32,18 +32,21 @@
 
   .outer-map-container {
     height: 60vh;
+    margin: 0 30%;
   }
 
-  .controller-container {
-    height: 33vh;
+  .game-bottom-container {
+    height: 30vh;
     display: flex;
     justify-content: center;
 
     .left {
-      width: 75vw;
+      width: 65%;
+      border: 1px solid red;
     }
     .right {
-      width: 25vw;
+      width: 35%;
+      border: 1px solid blue;
     }
   }
 }

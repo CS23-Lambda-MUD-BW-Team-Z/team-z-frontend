@@ -1,19 +1,27 @@
 .movements {
     height: inherit;
-    border-radius: 0px 15px 15px 0px;
+    border-radius: 15px;
     border: 5px solid #bb1333;
     display: flex;
+    padding: 10px;
     justify-content: center;
     flex-direction: column;
-    border-left: none;
+    width: 35%;
+    margin: 20px 0;
     
 }
 
 .svg-inline--fa {
-    font-size: 3rem;
+    font-size: 2.5rem;
     cursor: pointer;
     color: #bb1333;
+
+    &:hover {
+        color: #0049cc;
+    }
+
     &.disabled {
+        cursor: auto;
         color: darkgray;
     }
 }

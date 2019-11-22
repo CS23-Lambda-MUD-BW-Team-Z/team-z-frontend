@@ -114,7 +114,7 @@ function Game({ setUser, user, history, loginKey }) {
       <div className="outer-map-container">
         <Map rooms={rooms} current={current} />
       </div>
-      <div class="controller-container">
+      <div class="game-bottom-container">
         <div className="left">
           <h2>{user.name}</h2>
           <h3>{user.title}</h3>
