@@ -71,10 +71,10 @@
 
       a {
         color: #fff;
-      }
 
-      a:hover {
-        color: $purple2;
+        &:hover {
+          color: $purple2;
+        }
       }
     }
   }

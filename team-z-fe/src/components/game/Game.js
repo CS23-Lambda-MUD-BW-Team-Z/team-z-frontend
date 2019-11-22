@@ -106,7 +106,7 @@ function Game({ setUser, user, history, loginKey }) {
 
   return (
     <div className="outer-container">
-      <div className="button-container">
+      <div className="game-nav">
         <button onClick={logout} className="logout">
           Log Out
         </button>
@@ -114,14 +114,15 @@ function Game({ setUser, user, history, loginKey }) {
       <div className="outer-map-container">
         <Map rooms={rooms} current={current} />
       </div>
-      <div class="controller">
-        <div className="info">
+      <div class="controller-container">
+        <div className="left">
           <h2>{user.name}</h2>
           <h3>{user.title}</h3>
           <p>{user.description}</p>
         </div>
-        <div className="movements-container"></div>
-        <Movements setUser={setUser} />
+        <div className="right">
+          <Movements setUser={setUser} />
+        </div>
       </div>
     </div>
   );

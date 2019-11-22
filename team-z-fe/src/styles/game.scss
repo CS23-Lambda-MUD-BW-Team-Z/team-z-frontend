@@ -1,22 +1,50 @@
 .outer-container {
   display: flex;
+  background-color: lightblue;
   flex-direction: column;
 
-  .button-container {
+  .game-nav {
     width: 100%;
     display: flex;
-    align-items: end;
-    height: 7vh;
+    padding-right: 1em;
+    justify-content: flex-end;
+    height: 10vh;
+
+    .logout {
+      width: 10%;
+      background-color: $red1;
+      padding: 12px 25px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0px;
+      border: none;
+      text-decoration: none;
+      margin: 5px 20px 10px 0;
+      border-radius: 5px;
+
+      &:hover {
+        filter: brightness(0.8);
+        cursor: pointer;
+      }
+    }
   }
 
   .outer-map-container {
     height: 60vh;
   }
 
-  .controller {
+  .controller-container {
     height: 33vh;
     display: flex;
     justify-content: center;
+
+    .left {
+      width: 75vw;
+    }
+    .right {
+      width: 25vw;
+    }
   }
 }
 

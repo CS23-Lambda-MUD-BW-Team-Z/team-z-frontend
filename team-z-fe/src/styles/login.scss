@@ -59,10 +59,11 @@
         text-decoration: none;
         margin: 10px 20px 10px 0;
         border-radius: 5px;
-      }
-      button:hover {
-        filter: brightness(0.8);
-        cursor: pointer;
+
+        &:hover {
+          filter: brightness(0.8);
+          cursor: pointer;
+        }
       }
     }
 
@@ -72,10 +73,10 @@
 
       a {
         color: #fff;
-      }
 
-      a:hover {
-        color: $purple2;
+        &:hover {
+          color: $purple2;
+        }
       }
     }
   }
