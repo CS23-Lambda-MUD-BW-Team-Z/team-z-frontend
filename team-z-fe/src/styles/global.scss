@@ -8,6 +8,8 @@
 
 body {
   background-color: #f6f7fb;
+  margin: 0;
+  text-align: center;
   font-family: "Quicksand", sans-serif;
 }
 
@@ -25,7 +27,6 @@ hr {
   border: none;
   border-top: 1px solid rgba(0, 0, 0, 0.12);
   width: 100%;
-  margin: 20px 0;
 }
 
 a {

@@ -1,26 +1,72 @@
-.game-container {
+.outer-container {
   display: flex;
+  background-color: lightblue;
   flex-direction: column;
-}
 
-.bottom-section {
-  display: flex;
-  flex-direction: row;
-  transform: translate(10px, -101px);
-  justify-content: center;
-  height: 14rem;
-}
+  .game-nav {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.top-section {
-  border: 5px solid #bb1333;
-  border-radius: 15px 0px 0px 15px;
-  padding: 1rem;
-  width: 50%;
-}
+    .top-left {
+      .user-name {
+        margin-left: 20px;
+      }
+    }
+    .top-right {
+      .log-out {
+        background-color: $red1;
+        padding: 12px 25px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0px;
+        border: none;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-right: 20px;
 
-.outer-map-container {
-  display: flex;
-  justify-content: center;
+        &:hover {
+          filter: brightness(0.8);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .outer-map-container {
+    height: 65vh;
+    margin: 0 30%;
+  }
+
+  .game-bottom-container {
+    height: 25vh;
+    display: flex;
+    justify-content: space-around;
+
+    .bottom-left {
+      width: 30%;
+      display: flex;
+      justify-content: space-around;
+    }
+    .bottom-middle {
+      width: 40%;
+
+      h3 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+      }
+    }
+    .bottom-right {
+      width: 30%;
+      padding: 10px 0 0 10px;
+      margin: 0;
+    }
+  }
 }
 
 .logout {
