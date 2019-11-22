@@ -109,14 +109,19 @@ function Game( {setUser, user, history,loginKey} ) {
         }
 
     return (
-        <div>
+        <div className="game-container">
             
-            <h2>{user.name}</h2>
-            <h3>{user.title}</h3>
-            <p>{user.description}</p>
-            <Movements setUser={setUser}  />
             <Map rooms={rooms} current={current} />
-            <button onClick={logout}>Log Out</button>
+            <div className="bottom-section">
+                <div className="top-section">
+                <button onClick={logout} className="logout">Log Out</button>
+                    <h2>{user.name}</h2>
+                    <h3>{user.title}</h3>
+                    <p>{user.description}</p>
+                </div>
+                <Movements setUser={setUser}  />
+            </div>
+            
         </div>
     )
 }

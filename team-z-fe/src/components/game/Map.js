@@ -29,13 +29,13 @@ function Map({ setUser, user, history, rooms,current }) {
                     <div className={`room-${room.id} room-container`}
                         style={{
                             borderLeft: rooms[0] &&
-                                room.w_to === 0 ? "2px solid red" : "none",
+                                room.w_to === 0 ? "2px solid #bb1333" : "none",
                             borderRight: rooms[0] &&
-                                room.e_to === 0 ? "2px solid red" : "none",
+                                room.e_to === 0 ? "2px solid #bb1333" : "none",
                             borderBottom: rooms[0] &&
-                                room.s_to === 0 ? "2px solid red" : "none",
+                                room.s_to === 0 ? "2px solid #bb1333" : "none",
                             borderTop: rooms[0] &&
-                                room.n_to === 0 ? "2px solid red" : "none"
+                                room.n_to === 0 ? "2px solid #bb1333" : "none"
                         }}
                     >
 
