@@ -10,13 +10,11 @@
     align-items: center;
 
     .top-left {
-
       .user-name {
         margin-left: 20px;
       }
     }
     .top-right {
-
       .log-out {
         background-color: $red1;
         padding: 12px 25px;
@@ -48,15 +46,27 @@
     justify-content: space-around;
 
     .bottom-left {
+      width: 30%;
       border: 1px solid red;
       display: flex;
       justify-content: space-around;
     }
     .bottom-middle {
+      width: 40%;
       border: 1px solid green;
+
+      h3 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+      }
     }
     .bottom-right {
+      width: 30%;
       border: 1px solid blue;
+      padding: 0 0 0 20px;
     }
   }
 }
