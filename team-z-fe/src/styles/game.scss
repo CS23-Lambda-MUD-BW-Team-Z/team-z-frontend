@@ -36,24 +36,22 @@
   }
 
   .outer-map-container {
-    height: 60vh;
+    height: 65vh;
     margin: 0 30%;
   }
 
   .game-bottom-container {
-    height: 30vh;
+    height: 25vh;
     display: flex;
     justify-content: space-around;
 
     .bottom-left {
       width: 30%;
-      border: 1px solid red;
       display: flex;
       justify-content: space-around;
     }
     .bottom-middle {
       width: 40%;
-      border: 1px solid green;
 
       h3 {
         font-size: 1.6rem;
@@ -65,8 +63,8 @@
     }
     .bottom-right {
       width: 30%;
-      border: 1px solid blue;
-      padding: 0 0 0 20px;
+      padding: 10px 0 0 10px;
+      margin: 0;
     }
   }
 }
