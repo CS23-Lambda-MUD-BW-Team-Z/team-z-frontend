@@ -28,8 +28,8 @@ function Map({ setUser, user, history, rooms,current }) {
                 rooms.map(room => 
                     <div className={`room-${room.id} room-container`}
                         style={{
-                            boxShadow: rooms[0] &&
-                                room.w_to === 0 ? "0 -1px 0 #000" : "none",
+                            borderLeft: rooms[0] &&
+                                room.w_to === 0 ? "2px solid #bb1333" : "none",
                             borderRight: rooms[0] &&
                                 room.e_to === 0 ? "2px solid #bb1333" : "none",
                             borderBottom: rooms[0] &&

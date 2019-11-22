@@ -1,26 +1,23 @@
-.game-container {
+.outer-container {
   display: flex;
   flex-direction: column;
-}
 
-.bottom-section {
-  display: flex;
-  flex-direction: row;
-  transform: translate(10px, -101px);
-  justify-content: center;
-  height: 14rem;
-}
+  .button-container {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    height: 7vh;
+  }
 
-.top-section {
-  border: 5px solid #bb1333;
-  border-radius: 15px 0px 0px 15px;
-  padding: 1rem;
-  width: 50%;
-}
+  .outer-map-container {
+    height: 60vh;
+  }
 
-.outer-map-container {
-  display: flex;
-  justify-content: center;
+  .controller {
+    height: 33vh;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .logout {

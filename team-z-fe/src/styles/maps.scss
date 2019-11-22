@@ -11,12 +11,13 @@
 
 .map-container {
   display: grid;
+  justify-content: center;
   grid-template-columns: 3% 0% 3% 0% 3% 3% 0% 3% 3% 3% 3% 0% 3% 0% 3% 0% 3% 3% 3% 3% 0% 3% 3% 3% 3% 3% 3% 0% 3%;
   grid-template-rows: auto;
   border: 5px solid #bb1333;
   background-color: gray;
   border-radius: 15px;
-  transform: scale(0.8);
+  width: 100%;
   grid-template-areas:
   /*1    2     3    4    5    6   7    8    9     10   11   12   13   14   15  16   17   18   19   20   21   22   23   24   25   26   27   28   29*/
     ".    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    ."
@@ -67,9 +68,9 @@
     ".    .    .    .    .    .    .    .    .    r291 .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .    .";
 
   .room-container {
-    width: 2rem;
-    height: 2rem;
-    margin: 20px;
+    width: 1rem;
+    height: 1rem;
+    margin: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
